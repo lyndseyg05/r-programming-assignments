@@ -1,0 +1,51 @@
+---
+title: "Module 12 assignment"
+author: "Lyndsey Guidash"
+output: html_document
+---
+
+## Introduction
+
+R Markdown is a powerful authoring framework that allows users to combine narrative text, code, and output in a single document. It supports reproducible research by enabling analysts to embed R code directly within a report, ensuring that results are always up-to-date and transparent.
+
+## Narrative Section
+
+As someone who works with collaborative analytics and reproducible documentation, I find R Markdown to be an elegant solution for sharing insights. It bridges the gap between technical rigor and accessibility, allowing both analysts and stakeholders to engage with the content meaningfully. Whether you're building dashboards, modeling sentiment, or troubleshooting enterprise workflows, R Markdown helps maintain clarity and reproducibility.
+
+## Mathematical Expression
+
+Inline math: $\alpha + \beta = \gamma$
+
+Displayed equation:
+
+
+
+\[
+\mu = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]
+
+## Code Chunk 1: Load Libraries and Dataset
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(datasets)
+
+# Load the built-in 'mtcars' dataset
+data("mtcars")
+head(mtcars)
+```
+
+## Code Chunk 2: Generate Summary and Plot
+```{r}
+# Summary statistics
+summary(mtcars$mpg)
+
+# Create a scatter plot of mpg vs. hp
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point(color = "steelblue") +
+  labs(title = "MPG vs Horsepower", x = "Horsepower", y = "Miles per Gallon")
+```
+
+## Reflection
+
+R Markdown integrates code and commentary seamlessly, whereas plain reports separate them. Formatting this document took some messing around and I viewed the knitted output a lot to see what changes I wanted to make. 
